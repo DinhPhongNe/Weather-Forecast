@@ -12,7 +12,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height:  100vh;
   background: #43AFFC;
 }
 
@@ -234,7 +234,6 @@ header i {
 .humidity i {
   font-size: 37px;
 }
-
 
 .footer {
   height: 100px;
