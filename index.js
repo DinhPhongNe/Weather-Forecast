@@ -26,13 +26,13 @@ locationBtn.addEventListener("click", () =>{
 });
 
 function requestApi(city){
-    api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=vi&appid=786f2840856309bfcb81f2d1790f2903`;
+    api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=vi&appid=786f2840856309bfcb81f2d1790f2903`; // <= cái API ở đây
     fetchData();
 }
 
 function onSuccess(position){
     const {latitude, longitude} = position.coords; // nhận vĩ độ và kinh độ của thiết bị người dùng từ coords obj
-    api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&lang=vi&appid=786f2840856309bfcb81f2d1790f2903`;
+    api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&lang=vi&appid=786f2840856309bfcb81f2d1790f2903`; // <= cái API ở đây
     fetchData();
 }
 
@@ -48,7 +48,7 @@ function fetchData(){
     // nhận phản hồi từ api và trả lại bằng cách phân tích cú pháp thành js obj và theo cách khác
     // sau đó hàm gọi hàm weatherDetails với việc chuyển kết quả api làm đối số
     fetch(api).then(res => res.json()).then(result => weatherDetails(result)).catch(() =>{
-        infoTxt.innerText = "Something went wrong";
+        infoTxt.innerText = "Something went wrong"; // <= xảy ra khi khi có gì đó lỗi
         infoTxt.classList.replace("pending", "error");
     });
 }

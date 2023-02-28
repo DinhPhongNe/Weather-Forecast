@@ -234,3 +234,21 @@ header i {
 .humidity i {
   font-size: 37px;
 }
+
+
+.footer {
+  height: 100px;
+  padding: 20px 0;
+  text-align: center;
+  color: #696969;
+}
+
+.footer i {
+  font-size: 20px;
+  color: #696969;
+}
+
+.footer p {
+  margin: 0 0;
+  font-size: 15px;
+}
